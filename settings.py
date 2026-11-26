@@ -51,3 +51,26 @@ SEASONS = [
     "Autumn",
     "Winter"
 ]
+
+# ==========================================
+# MAIN MENU SETTINGS
+# ==========================================
+
+MENU_BACKGROUND = (125, 180, 110)
+
+BUTTON_WIDTH = 280
+BUTTON_HEIGHT = 55
+BUTTON_SPACING = 15
+
+BUTTON_COLOR = (139, 95, 60)
+BUTTON_HOVER_COLOR = (175, 125, 75)
+BUTTON_BORDER_COLOR = (90, 55, 30)
+BUTTON_TEXT_COLOR = (255, 245, 220)
+BUTTON_DISABLED_COLOR = (115, 110, 100)
+
+TITLE_COLOR = (255, 245, 220)
+TITLE_SHADOW_COLOR = (80, 55, 35)
+
+SKY_COLOR = (170, 215, 235)
+CLOUD_COLOR = (255, 250, 240)
+HILL_COLOR = (100, 155, 85)
