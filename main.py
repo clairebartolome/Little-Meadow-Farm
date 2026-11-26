@@ -1,6 +1,11 @@
 
 import pygame
+
 from settings import *
+
+from src.scenes.main_menu import MainMenu
+from src.scenes.game_scene import GameScene
+from src.scenes.settings_menu import SettingsMenu
 
 
 def main():
@@ -8,120 +13,71 @@ def main():
     # Initialise Pygame
     pygame.init()
 
-    # Create game window
+    # Create window
     screen = pygame.display.set_mode(
         (SCREEN_WIDTH, SCREEN_HEIGHT)
     )
 
     pygame.display.set_caption(GAME_TITLE)
 
-    # Create game clock
     clock = pygame.time.Clock()
 
-    # Create fonts
-    title_font = pygame.font.Font(None, 72)
-    subtitle_font = pygame.font.Font(None, 32)
-    small_font = pygame.font.Font(None, 22)
+    # Create game scenes
+    scenes = {
+        "menu": MainMenu(),
+        "game": GameScene(),
+        "settings": SettingsMenu()
+    }
+
+    # Start on the main menu
+    current_scene = "menu"
 
     running = True
 
     # Main game loop
     while running:
 
-        # Handle events
         for event in pygame.event.get():
 
+            # Close window
             if event.type == pygame.QUIT:
+
                 running = False
+                break
 
-            if event.type == pygame.KEYDOWN:
+            # Send events to current scene
+            next_scene = scenes[
+                current_scene
+            ].handle_event(event)
 
-                if event.key == pygame.K_ESCAPE:
-                    running = False
+            # Handle scene transitions
+            if next_scene == "quit":
 
-        # Draw grass background
-        screen.fill(GRASS)
+                running = False
+                break
 
-        # Draw world tile grid
-        for x in range(0, SCREEN_WIDTH, TILE_SIZE):
+            elif next_scene in scenes:
 
-            pygame.draw.line(
-                screen,
-                DARK_GRASS,
-                (x, 0),
-                (x, SCREEN_HEIGHT)
-            )
+                # Reset gameplay when starting
+                # a new game
+                if next_scene == "game":
+                    scenes["game"] = GameScene()
 
-        for y in range(0, SCREEN_HEIGHT, TILE_SIZE):
+                current_scene = next_scene
+                break
 
-            pygame.draw.line(
-                screen,
-                DARK_GRASS,
-                (0, y),
-                (SCREEN_WIDTH, y)
-            )
+        if not running:
+            break
 
-        # Draw title
-        title = title_font.render(
-            GAME_TITLE,
-            True,
-            WHITE
-        )
+        # Draw current scene
+        scenes[current_scene].draw(screen)
 
-        screen.blit(
-            title,
-            title.get_rect(
-                center=(SCREEN_WIDTH // 2, 250)
-            )
-        )
-
-        # Draw subtitle
-        subtitle = subtitle_font.render(
-            "Your farming adventure begins here!",
-            True,
-            CREAM
-        )
-
-        screen.blit(
-            subtitle,
-            subtitle.get_rect(
-                center=(SCREEN_WIDTH // 2, 320)
-            )
-        )
-
-        # Draw instructions
-        instructions = small_font.render(
-            "Press ESC to exit",
-            True,
-            WHITE
-        )
-
-        screen.blit(
-            instructions,
-            instructions.get_rect(
-                center=(SCREEN_WIDTH // 2, 380)
-            )
-        )
-
-        # Draw game version
-        version = small_font.render(
-            f"Version {GAME_VERSION}",
-            True,
-            WHITE
-        )
-
-        screen.blit(
-            version,
-            (15, SCREEN_HEIGHT - 30)
-        )
-
-        # Update display
+        # Refresh display
         pygame.display.flip()
 
         # Limit frame rate
         clock.tick(FPS)
 
-    # Close Pygame
     pygame.quit()
 
 
