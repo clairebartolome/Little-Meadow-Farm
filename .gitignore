@@ -1,0 +1,42 @@
+
+# Python virtual environment
+.venv/
+.venv*/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# PyCharm
+.idea/
+
+# Environment variables
+.env
+
+# Saved games
+saves/*
+!saves/.gitkeep
+
+# Local databases
+*.db
+*.sqlite3
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build files
+build/
+dist/
+*.exe
+
+# Operating system files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
