@@ -1,5 +1,5 @@
 
-# Python virtual environment
+# Python virtual environments
 .venv/
 .venv*/
 venv/
@@ -19,7 +19,7 @@ __pycache__/
 saves/*
 !saves/.gitkeep
 
-# Local databases
+# Databases
 *.db
 *.sqlite3
 
@@ -39,4 +39,5 @@ Thumbs.db
 
 # Logs
 *.log
+
 

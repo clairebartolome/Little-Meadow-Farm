@@ -1,0 +1,114 @@
+
+# Little Meadow Farm - Game Design Document
+
+## Game Overview
+
+A single-player 2D pixel-art farming simulator
+set in a peaceful countryside village.
+
+## Technical Specifications
+
+- Language: Python
+- Framework: Pygame Community Edition
+- Platform: Windows PC
+- Perspective: Top-down
+- Resolution: 960 x 640
+- Tile size: 32 x 32 pixels
+- Target frame rate: 60 FPS
+
+## Art Direction
+
+- Cosy countryside environment
+- Warm colour palette
+- Pixel-art characters
+- Seasonal landscapes
+- Animated crops and animals
+
+## Starting Player Statistics
+
+- Health: 100
+- Energy: 100
+- Gold: 100
+- Seeds: 10
+- Day: 1
+- Season: Spring
+- Time: 6:00 AM
+
+## Core Gameplay Loop
+
+1. Wake up.
+2. Plant seeds.
+3. Water crops.
+4. Collect resources.
+5. Harvest crops.
+6. Sell products.
+7. Buy seeds and upgrades.
+8. Sleep and advance to the next day.
+
+## Initial Crops
+
+- Carrots
+- Potatoes
+- Tomatoes
+- Corn
+- Strawberries
+- Pumpkins
+
+## Farm Animals
+
+- Chickens
+- Cows
+- Ducks
+- Sheep
+- Goats
+
+## Locations
+
+- Farm
+- Farmhouse
+- Countryside village
+- General store
+- Animal shop
+- Carpenter
+- Forest
+- Fishing pond
+- Mines
+
+## Seasons
+
+Each season lasts 28 in-game days.
+
+- Spring
+- Summer
+- Autumn
+- Winter
+
+## Minimum Viable Product
+
+The first playable version should allow players
+to move around the farm, plant seeds, water crops,
+harvest crops, earn money and save their progress.
+
+## Development Progress
+
+- [x] Project setup
+- [x] Git and GitHub setup
+- [x] Main menu
+- [x] Game scene management
+- [ ] Player movement verification
+- [ ] Character sprites and animations
+- [ ] Farm map
+- [ ] Collision detection
+- [ ] Farming mechanics
+- [ ] Inventory system
+- [ ] Day and night cycle
+- [ ] Economy
+- [ ] Save and load system
+- [ ] NPCs
+- [ ] Animals
+- [ ] Fishing
+- [ ] Mining
+- [ ] Crafting
+- [ ] Weather and seasons
+- [ ] Automated testing
+- [ ] Game release

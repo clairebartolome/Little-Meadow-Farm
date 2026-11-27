@@ -14,8 +14,12 @@ FPS = 60
 
 # World settings
 TILE_SIZE = 32
+HUD_HEIGHT = 60
 
-# Colours (RGB)
+# ==========================================
+# COLOURS
+# ==========================================
+
 GRASS = (120, 170, 85)
 DARK_GRASS = (90, 140, 65)
 LIGHT_GRASS = (145, 190, 100)
@@ -28,12 +32,34 @@ CREAM = (255, 245, 220)
 BROWN = (100, 65, 40)
 GOLD = (255, 215, 0)
 
-# Player settings
+# ==========================================
+# PLAYER SETTINGS
+# ==========================================
+
 PLAYER_SPEED = 180
+
+PLAYER_WIDTH = 32
+PLAYER_HEIGHT = 48
+
+PLAYER_START_X = 480
+PLAYER_START_Y = 200
+
 PLAYER_MAX_ENERGY = 100
 PLAYER_MAX_HEALTH = 100
 
-# Starting resources
+# Player colours
+PLAYER_SHIRT_COLOR = (75, 130, 180)
+PLAYER_TROUSERS_COLOR = (65, 70, 110)
+PLAYER_SKIN_COLOR = (245, 200, 155)
+PLAYER_HAIR_COLOR = (95, 60, 35)
+PLAYER_HAT_COLOR = (220, 180, 100)
+PLAYER_SHOE_COLOR = (75, 50, 35)
+PLAYER_SHADOW_COLOR = (85, 120, 65)
+
+# ==========================================
+# STARTING RESOURCES
+# ==========================================
+
 STARTING_MONEY = 100
 STARTING_SEEDS = 10
 STARTING_DAY = 1
@@ -51,3 +77,26 @@ SEASONS = [
     "Autumn",
     "Winter"
 ]
+
+# ==========================================
+# MAIN MENU SETTINGS
+# ==========================================
+
+MENU_BACKGROUND = (125, 180, 110)
+
+BUTTON_WIDTH = 280
+BUTTON_HEIGHT = 55
+BUTTON_SPACING = 15
+
+BUTTON_COLOR = (139, 95, 60)
+BUTTON_HOVER_COLOR = (175, 125, 75)
+BUTTON_BORDER_COLOR = (90, 55, 30)
+BUTTON_TEXT_COLOR = (255, 245, 220)
+BUTTON_DISABLED_COLOR = (115, 110, 100)
+
+TITLE_COLOR = (255, 245, 220)
+TITLE_SHADOW_COLOR = (80, 55, 35)
+
+SKY_COLOR = (170, 215, 235)
+CLOUD_COLOR = (255, 250, 240)
+HILL_COLOR = (100, 155, 85)
